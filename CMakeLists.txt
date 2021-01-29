@@ -27,7 +27,7 @@ set(CFLAGS
 set(LDFLAGS)
 
 if (PLATFORM_DREAMCAST)
-    list(APPEND LDFLAGS kallisti kosutils)
+    list(APPEND LDFLAGS)
 endif ()
 
 #############
