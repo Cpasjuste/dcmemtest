@@ -56,15 +56,12 @@ void MemTest::doTest() {
     uint32_t data, *address;
     unsigned long num_bytes;
 
-    /*
     if (mm_top() == 0x8e000000) {
         num_bytes = NUM_BYTES_32;
     } else {
         num_bytes = NUM_BYTES_16;
     }
-    */
-    num_bytes = NUM_BYTES_16;
-    setText(0, "BASE ADDRESS: %p, BYTES: %lu", BASE_ADDRESS, num_bytes);
+    setText(0, "BASE ADDRESS: %p, SIZE: %i MB)", BASE_ADDRESS, num_bytes / (1024 * 1024));
 
     fflush(stdout);
     data = memTestDataBus(BASE_ADDRESS);
