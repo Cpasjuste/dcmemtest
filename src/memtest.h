@@ -19,6 +19,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /*
  * Define NULL pointer value.
  */
@@ -40,5 +44,8 @@ datum *memTestAddressBus(volatile datum *baseAddress, unsigned long nBytes);
 
 datum *memTestDevice(volatile datum *baseAddress, unsigned long nBytes);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _memtest_h */
